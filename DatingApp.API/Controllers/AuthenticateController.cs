@@ -26,7 +26,7 @@ namespace DatingApp.API.Controllers
         }
     
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromForm]RegisterDTO model)
+    public async Task<IActionResult> Register(RegisterDTO model)
     {
         // validate request 
         if(ModelState.IsValid)
@@ -55,7 +55,7 @@ namespace DatingApp.API.Controllers
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromForm]UserLoginDto model)
+    public async Task<IActionResult> Login(UserLoginDto model)
     {
         if(ModelState.IsValid)
         {
