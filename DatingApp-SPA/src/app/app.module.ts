@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthenticationService } from './_services/AuthenticationService.service';
+import { HomeComponent } from './Home/Home.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -13,7 +15,9 @@ import { AuthenticationService } from './_services/AuthenticationService.service
    declarations: [
       AppComponent,
       ValueComponent,
-      NavbarComponent
+      NavbarComponent,
+      HomeComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,

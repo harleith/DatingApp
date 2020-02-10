@@ -9,7 +9,7 @@ import { AuthenticationService } from '../_services/AuthenticationService.servic
 
 export class NavbarComponent implements OnInit {
   model: any = {};
-
+  isLogin: boolean;
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
@@ -18,19 +18,24 @@ export class NavbarComponent implements OnInit {
   login() {
     this.authenticationService.login(this.model).subscribe(next => {
         console.log('Logged in Successfully');
+        this.isLogin = true;
+
     }, error => {
       console.log('Failed to Login');
     });
   }
 
   loggedIn() {
+    console.log('test');
     const token = localStorage.getItem('tokenHandler');
-    return !!token;
+    // return !!token;
+    this.isLogin = true;
   }
 
   logout() {
     localStorage.removeItem('handlerToken');
     console.log('logged out');
+    this.isLogin = false;
   }
 
 }

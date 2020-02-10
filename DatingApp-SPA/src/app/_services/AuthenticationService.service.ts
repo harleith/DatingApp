@@ -19,4 +19,9 @@ export class AuthenticationService {
     })
     );
   }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'register', model);
+  }
+
 }
