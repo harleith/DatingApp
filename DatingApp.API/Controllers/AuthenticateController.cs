@@ -91,15 +91,12 @@ namespace DatingApp.API.Controllers
 
             var handlerToken = tokenHandler.WriteToken(token);
 
-            return Ok(new {
-                handlerToken
-                });
+            return Ok(new { handlerToken });
         }
         else
         {
             return Unauthorized();
         }
-
     }
     }
 }
