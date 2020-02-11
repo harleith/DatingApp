@@ -28,10 +28,11 @@ export class NavbarComponent implements OnInit {
   }
 
   loggedIn() {
-    console.log('test');
-    const token = localStorage.getItem('tokenHandler');
+    console.log('loggedIn');
+    // const token = localStorage.getItem('tokenHandler');
     // return !!token;
-    this.isLogin = true;
+    // this.isLogin = true;
+    return this.authenticationService.loggedin();
   }
 
   logout() {
