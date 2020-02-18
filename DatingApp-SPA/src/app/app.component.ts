@@ -7,12 +7,13 @@ import {JwtHelperService} from '@auth0/angular-jwt';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit {
+  tittle = 'app';
   jwtHelper = new JwtHelperService();
 
-  constructor(private authenticateService: AuthenticationService){}
+  constructor(private authenticateService: AuthenticationService) {}
 
-    ngOninit() {
+    ngOnInit() {
       const token = localStorage.getItem('tokenHandler');
       if (token) {
         this.authenticateService.decodedToken = this.jwtHelper.decodeToken(token);

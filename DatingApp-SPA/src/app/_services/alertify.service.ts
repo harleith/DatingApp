@@ -17,11 +17,11 @@ constructor() { }
   }
 
   success(messages: string) {
-    alertify.success(messages);
+    alertify.success('Login Berhasil');
   }
 
   error(messages: string) {
-    alertify.error(messages);
+    alertify.error('Gagal Login');
   }
 
   warning(messages: string) {
@@ -29,6 +29,6 @@ constructor() { }
   }
 
   message(messages: string) {
-    alertify.message(messages);
+    alertify.message('Logout Berhasil');
   }
 }
