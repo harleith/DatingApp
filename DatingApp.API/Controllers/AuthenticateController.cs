@@ -17,7 +17,6 @@ namespace DatingApp.API.Controllers
     public class AuthenticateController : ControllerBase
     {
         private readonly IAuthRepository _repo;
-
         private readonly IConfiguration _config;
         public AuthenticateController(IAuthRepository repo, IConfiguration config)
         {
